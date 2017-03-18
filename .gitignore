@@ -1,0 +1,17 @@
+# 该文件控制哪些文件不被github跟踪
+# 此为注释 ,将被 Git 忽略
+# *.a 忽略所有 .a 结尾的文件
+# !lib.a 但 lib.a 除外
+# /TODO 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+
+# build/ 忽略 build/ 目录下的所有文件
+
+# doc/*.txt 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+
+# doc/**/*.txt 会忽略掉 doc/ 里面所有的txt文件，包括子目录下的（**/ 从 Git 1.8.2 之后开始支持 **/ 匹配模式，表示递归匹配子目录下的文件）
+
+# local.properties  过滤具体文件
+# ！local.properties 添加具体文件
+# *.[oa] 忽略所有以 .o 或 .a 结尾的文件
+# 被过滤掉的文件就不会出现在你的GitHub库中了，当然本地库中还有，只是push的时候不会上传
+# 注意：如果你不慎在创建.gitignore文件之前就push了项目，那么即使你在.gitignore文件中写入新的过滤规则，这些规则也不会起作用，Git仍然会对所有文件进行版本管理
